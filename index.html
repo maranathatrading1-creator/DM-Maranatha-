@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DM Maranatha — quality automotive parts, accessories and vehicle essentials.">
+  <title>DM Maranatha | Automotive Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">DM MARANATHA • QUALITY PARTS. TRUSTED SERVICE. • Fast response on WhatsApp</div>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="DM Maranatha Trading Enterprise home">
+      <span class="logo-panel"><img class="site-logo" src="assets/dm-maranatha-logo-mark.png" alt="DM Maranatha logo"></span>
+      <span class="brand-copy"><strong>MARANATHA TRADING ENTERPRISE</strong><em>Always At Your Service</em><small>Deals in Exotic Lubricants, Batteries &amp; Car Care Products</small></span>
+    </a>
+    <nav class="desktop-nav">
+      <a href="#shop">Shop</a><a href="#about">Why Us</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn search-toggle" aria-label="Search">⌕</button>
+      <button class="cart-btn" id="cartOpen" aria-label="Open cart">Cart <b id="cartCount">0</b></button>
+      <button class="menu-btn" id="menuOpen" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="menu-close" id="menuClose">×</button>
+    <a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#about">Why Us</a><a href="#contact">Contact</a>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">DRIVE WITH CONFIDENCE</span>
+        <h1>Parts that keep<br><em>you moving.</em></h1>
+        <p>Browse our automotive catalog by product, brand or category. Select a product to see pricing and ordering details.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#shop">Shop products <span>→</span></a>
+          <a class="btn btn-ghost" href="#contact">Talk to us</a>
+        </div>
+        <div class="trust-row"><span>✓ Quality checked</span><span>✓ Friendly support</span><span>✓ Ghana-wide service</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-ring"></div>
+        <div class="hero-card">
+          <span>DM</span>
+          <strong>DRIVE<br>BETTER.</strong>
+          <small>MARANATHA</small>
+        </div>
+        <div class="floating-tag">EST. FOR<br>EVERY JOURNEY</div>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div><span class="eyebrow">THE COLLECTION</span><h2>Shop the DM Maranatha catalog</h2></div>
+        <p>Search by product, brand or category.</p>
+      </div>
+      <div class="toolbar">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search products, brands or SKUs..." autocomplete="off"></label>
+        <select id="categorySelect" aria-label="Filter by category"><option value="All">All categories</option></select>
+        <select id="sortSelect" aria-label="Sort products">
+          <option value="featured">Featured</option><option value="low">Price: low to high</option>
+          <option value="high">Price: high to low</option><option value="name">Name A–Z</option>
+        </select>
+      </div>
+      <div class="active-filter" id="activeFilter"></div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="feature-banner" id="about">
+      <div><span class="eyebrow">WHY DM MARANATHA</span><h2>Built around the way you drive.</h2></div>
+      <div class="features">
+        <article><h3>Reliable selection</h3><p>Practical products chosen with quality and compatibility in mind.</p></article>
+        <article><h3>Human support</h3><p>Need help identifying a part? Talk to our team before you buy.</p></article>
+        <article><h3>Simple ordering</h3><p>Find it, choose your variant, add it to cart and send your order.</p></article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div><span class="eyebrow">NEED A PART?</span><h2>Let's get your vehicle back on the road.</h2><p>Send us the part name, vehicle model or a photo and our team can help you identify what you need.</p></div>
+      <a class="btn btn-primary" href="https://wa.me/233240106875" target="_blank" rel="noopener">Chat on WhatsApp →</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><img class="footer-logo" src="assets/dm-maranatha-logo-mark.png" alt="DM Maranatha logo"><div><strong>MARANATHA TRADING ENTERPRISE</strong><small>Always At Your Service</small></div></div>
+    <p>© 2026 DM Maranatha. Quality parts for every journey.</p>
+    <div><a href="#shop">Shop</a><a href="#contact">Contact</a></div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-head"><div><span class="eyebrow">YOUR ORDER</span><h2>Shopping cart</h2></div><button id="cartClose">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty">Your cart is ready for something good.</div>
+    <div class="cart-footer">
+      <div><span>Subtotal</span><strong id="cartTotal">GH₵0.00</strong></div>
+      <button class="btn btn-primary full" id="checkoutBtn">Order via WhatsApp →</button>
+      <small>Delivery and final availability can be confirmed with our team.</small>
+    </div>
+  </aside>
+
+  <div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose">×</button>
+      <div class="modal-gallery">
+        <div class="gallery-main" id="galleryMain"></div>
+        <div class="gallery-thumbs" id="galleryThumbs"></div>
+      </div>
+      <div class="product-info">
+        <span class="eyebrow" id="modalCategory"></span>
+        <h2 id="modalName"></h2>
+        <div class="rating">★★★★★ <span id="modalBrand"></span></div>
+        <div class="modal-price" id="modalPrice"></div>
+        <p id="modalDescription"></p>
+        <div class="variant-block"><strong>Variant</strong><div class="variants" id="variants"></div></div>
+        <div class="add-row"><div class="modal-qty"><button id="modalMinus">−</button><b id="modalQty">1</b><button id="modalPlus">+</button></div><button class="btn btn-primary add-cart-btn" id="addModal"><span class="cart-icon">🛒</span> Add to cart</button></div>
+        <div class="specs" id="modalSpecs"></div>
+      </div>
+    </div>
+  </div>
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

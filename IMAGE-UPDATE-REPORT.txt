@@ -1,0 +1,9 @@
+DM Maranatha image refresh report — 9 November 2026
+
+Images in newly supplied ZIP: 260
+Existing product image assets refreshed by filename match: 207
+Unmatched supplied images left out to avoid incorrect product assignments: 53
+Ambiguous filename groups left unchanged: 4
+
+The existing store layout, logo, product data, search, category filters, cart and checkout files were retained.
+Image matching used normalized filenames; no unmatched image was assigned to a different product by guesswork.
